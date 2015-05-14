@@ -1,0 +1,52 @@
+<head>
+  <title>train</title>
+</head>
+<body>
+    {{> list}}
+</body>
+<template name="list">
+    <div class="panel panel-default" style="margin:25px;">
+        <div class="panel-heading">PTA Projects</div>
+        <p>{{> addForm}}</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Score</th>
+                    <th>Name</th>
+                    <th>Leader</th>
+		    <th>DRR</th>
+                    <th>status</th>
+                </tr>
+            </thead>
+            <tbody id="list">
+
+            </tbody>
+        </table>
+        <div id="pager"></div>
+    </div>
+
+</template>
+
+<template name="addForm">
+    <div style="margin:20px; text-align:center; background-color:#fcfcfc">
+    <form class="form-inline addForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input class="form-control" type="text" name="name" placeholder="Type name" />
+        </div>
+        <div class="form-group">
+            <label for="score">Score</label>
+            <input class="form-control" type="text" name="score" placeholder="0" />
+        </div>
+	<div class="form-group">
+            <label for="leader">Leader</label>
+            <input class="form-control" type="text" name="leader" placeholder="Type Leader" />
+        </div>
+	<div class="form-group">
+            <label for="drr">DRR</label>
+            <input class="form-control" type="text" name="drr" placeholder="Type DRR" />
+        </div>
+        <button type="submit" class="btn btn-default">Add</button>
+    </form>
+    </div>
+</template>
